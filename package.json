@@ -6,7 +6,14 @@
   "bin": {
     "ymc": "index.js"
   },
-  "files": ["templates", "dist", "index.js", "package.json", "settings.json", "readme.md"],
+  "files": [
+    "templates",
+    "dist",
+    "index.js",
+    "package.json",
+    "settings.json",
+    "readme.md"
+  ],
   "scripts": {
     "build": "gulp"
   },
