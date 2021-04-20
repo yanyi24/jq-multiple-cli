@@ -40,10 +40,10 @@ src/pages/pageA/index.scss
 
 ```
 // 查看版本
-vmc -V
+ymc -V
 
 // 查看帮助信息
-vmc -h
+ymc -h
 ```
 
 ## 其他说明

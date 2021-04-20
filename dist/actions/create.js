@@ -13,7 +13,7 @@ const inquirer_1 = tslib_1.__importDefault(require("inquirer"));
 const inquirers_1 = require("../inquirers");
 const path_1 = require("path");
 const downloadTemplate = util_1.promisify(download_git_repo_1.default);
-const gitUrl = 'https://gitee.com/yanyi24_yanyi9399/jq-page-template.git';
+const gitUrl = 'https://github.com/yanyi24/jq-page-template.git';
 const rule = art_template_1.default.defaults.rules[0];
 rule.test = new RegExp(rule.test.source.replace('<%', '<\\\?').replace('%>', '\\\?>'));
 function default_1(projectName, options) {

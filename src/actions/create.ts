@@ -17,7 +17,7 @@ interface CreateOptions{
 }
 
 const downloadTemplate = promisify<string, string, {clone: boolean}>(download);
-const gitUrl = 'https://gitee.com/yanyi24_yanyi9399/jq-page-template.git';
+const gitUrl = 'https://github.com/yanyi24/jq-page-template.git';
 
 const rule = artTemplate.defaults.rules[0];
 rule.test = new RegExp(rule.test.source.replace('<%', '<\\\?').replace('%>', '\\\?>'));
