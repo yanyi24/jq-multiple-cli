@@ -1,0 +1,44 @@
+{
+  "name": "jq-multiple-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "ymc": "index.js"
+  },
+  "files": ["templates", "dist", "index.js", "package.json", "settings.json", "readme.md"],
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/yanyi24_yanyi9399/jq-multiple-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "chalk": "^4.1.0",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "execa": "^5.0.0",
+    "fs-extra": "^9.1.0",
+    "inquirer": "^8.0.0",
+    "lodash": "^4.17.21",
+    "ora": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/del": "^4.0.0",
+    "@types/fs-extra": "^9.0.11",
+    "@types/gulp": "^4.0.8",
+    "@types/inquirer": "^7.3.1",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "^14.14.41",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "*",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.2.0"
+  }
+}

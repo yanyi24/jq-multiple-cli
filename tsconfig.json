@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "esnext",
+      "scripthost"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/typings"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

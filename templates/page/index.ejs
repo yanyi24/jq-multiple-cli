@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{name}}</title>
+  <link rel="canonical" href="{{canonical}}">
+  <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<%- include('{{dir}}sections/header.ejs'); -%>
+<div class="{{className}}">
+  page {{name}} works!
+</div>
+<%- include('{{dir}}sections/footer.ejs'); -%>
+</body>
+</html>
