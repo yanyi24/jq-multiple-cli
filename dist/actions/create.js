@@ -11,7 +11,6 @@ const lodash_1 = require("lodash");
 const fs_extra_1 = require("fs-extra");
 const inquirer_1 = tslib_1.__importDefault(require("inquirer"));
 const inquirers_1 = require("../inquirers");
-const path_1 = require("path");
 const downloadTemplate = util_1.promisify(download_git_repo_1.default);
 const gitUrl = 'https://github.com/yanyi24/jq-page-template.git';
 const rule = art_template_1.default.defaults.rules[0];
@@ -36,7 +35,7 @@ function default_1(projectName, options) {
                     }
                 });
                 spinner.info('模版初始化成功');
-                fs_extra_1.writeFileSync(path_1.resolve(process.cwd(), 'settings.json'), fs_extra_1.readFileSync(path_1.resolve(cwd, 'config/settings.json')));
+                // writeFileSync(resolve(process.cwd(),projectName+'/settings.json'), readFileSync(resolve(cwd, 'config/settings.json')));
                 if (options.install || options.pkgTool) {
                     utils_1.installPkg(options.pkgTool, cwd);
                 }

@@ -5,7 +5,7 @@ import { join } from "path";
 import {outputFileSync, existsSync, readdirSync} from "fs-extra";
 
 export default function (name: string, option: {tsx: boolean}) {
-  const domain = require('../../settings.json').domain;
+  const domain = require(process.cwd() + '/settings.json').domain;
   const dirLevel = name.split('/').length;
   let dir = '../';
   for (let i = 0; i < dirLevel; i++) {

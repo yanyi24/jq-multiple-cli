@@ -7,7 +7,7 @@ const lodash_1 = require("lodash");
 const path_1 = require("path");
 const fs_extra_1 = require("fs-extra");
 function default_1(name, option) {
-    const domain = require('../../settings.json').domain;
+    const domain = require(process.cwd() + '/settings.json').domain;
     const dirLevel = name.split('/').length;
     let dir = '../';
     for (let i = 0; i < dirLevel; i++) {

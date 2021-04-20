@@ -8,7 +8,6 @@ import {partition} from 'lodash';
 import {readFileSync, unlinkSync, writeFileSync} from "fs-extra";
 import inquirer from "inquirer";
 import {installQues, pkgToolQues} from "../inquirers";
-import {resolve} from 'path';
 
 interface CreateOptions{
   install: boolean;
@@ -43,8 +42,6 @@ export default async function (projectName: string, options: CreateOptions) {
         }
       });
       spinner.info('模版初始化成功');
-
-      writeFileSync(resolve(process.cwd(),'settings.json'), readFileSync(resolve(cwd, 'config/settings.json')));
 
       if (options.install || options.pkgTool) {
         installPkg(options.pkgTool, cwd)
