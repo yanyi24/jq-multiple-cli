@@ -29,11 +29,19 @@ ymc create myProject
 
 ```
 // 基本用法
-ymc add p pageA
+ymc add p pageA 自动生成一个页面模板
 将生成
 src/pages/pageA/index.ejs
 src/pages/pageA/index.ts
 src/pages/pageA/index.scss
+
+ymc add ga [pageName] 
+例如: ymc add ga demo 
+将为pageName/inde.ejs 里a、button标签生成pageName/ga.xlsx文件里对应的ga代码
+
+参数 --dir  配置page的父级目录，默认： 'src/pages/'
+例如: ymc add ga header --dir src/sections/
+表示： 为src/sections/header/index.ejs 添加ga代码
 ```
 
 ## 其它命令
@@ -52,4 +60,5 @@ ymc -h
 2. 打包后可以使用 npm serve, 可以在创建一个本地服务器，以便查看项目，PWA功能才能生效；
 3. webpack的热更新只适用于样式文件，其他html文件更新需要手动刷新；
 4. 由于使用ejs加载了公共头部、尾部，所以修改公共头部后需要在引入的页面随便修改点什么才能看到变化（或者重新start一下）；
-5. ts中使用jQuery需要import，在项目打包时不会打包jQuery。
+5. ts中使用jQuery需要import，在项目打包时不会打包jQuery；
+6. add ga 时，应首先保证目录下有ga.xlsx文件、index.ejs文件，且可打开，且里面格式如demo/ga.xlsx格式。

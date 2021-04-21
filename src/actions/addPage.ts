@@ -4,7 +4,7 @@ import { kebabCase } from "lodash";
 import { join } from "path";
 import {outputFileSync, existsSync, readdirSync} from "fs-extra";
 
-export default function (name: string, option: {tsx: boolean}) {
+export default function (name: string) {
   const domain = require(process.cwd() + '/settings.json').domain;
   const dirLevel = name.split('/').length;
   let dir = '../';

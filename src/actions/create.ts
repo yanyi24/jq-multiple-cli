@@ -31,7 +31,7 @@ export default async function (projectName: string, options: CreateOptions) {
 
     if (allFiles.length) {
       partition(allFiles, 'isDir')[1].forEach(item => {
-        if (!item.file.includes('assets')) {
+        if (!item.file.includes('assets') && !item.file.includes('.xlsx')) {
           const content = artTemplate(process.cwd() + '/' + item.file, { projectName, domain: options.domain });
           let dist = item.file;
           if (dist.includes('.art')) {
@@ -62,7 +62,7 @@ export default async function (projectName: string, options: CreateOptions) {
           spinner.info(chalk.blue(`
             $ cd ${projectName}
             $ npm install or yarn install
-            $ npm start
+            $ npm run start
           `));
         }
       }

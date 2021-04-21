@@ -54,7 +54,6 @@ function installPkg(pkgTool, cwd) {
         }
         else {
             const spinner = ora_1.default(chalk_1.default.blue('正在安装依赖...')).start();
-            console.log(cwd);
             exec(`${tool} install`, { cwd }).then(res => {
                 spinner.succeed(chalk_1.default.green('依赖安装成功'));
             }).catch(err => {

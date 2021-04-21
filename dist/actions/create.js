@@ -24,7 +24,7 @@ function default_1(projectName, options) {
             const cwd = './' + projectName;
             if (allFiles.length) {
                 lodash_1.partition(allFiles, 'isDir')[1].forEach(item => {
-                    if (!item.file.includes('assets')) {
+                    if (!item.file.includes('assets') && !item.file.includes('.xlsx')) {
                         const content = art_template_1.default(process.cwd() + '/' + item.file, { projectName, domain: options.domain });
                         let dist = item.file;
                         if (dist.includes('.art')) {
@@ -35,7 +35,6 @@ function default_1(projectName, options) {
                     }
                 });
                 spinner.info('模版初始化成功');
-                // writeFileSync(resolve(process.cwd(),projectName+'/settings.json'), readFileSync(resolve(cwd, 'config/settings.json')));
                 if (options.install || options.pkgTool) {
                     utils_1.installPkg(options.pkgTool, cwd);
                 }
@@ -54,7 +53,7 @@ function default_1(projectName, options) {
                         spinner.info(chalk_1.default.blue(`
             $ cd ${projectName}
             $ npm install or yarn install
-            $ npm start
+            $ npm run start
           `));
                     }
                 }

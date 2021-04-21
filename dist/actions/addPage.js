@@ -6,7 +6,7 @@ const chalk_1 = tslib_1.__importDefault(require("chalk"));
 const lodash_1 = require("lodash");
 const path_1 = require("path");
 const fs_extra_1 = require("fs-extra");
-function default_1(name, option) {
+function default_1(name) {
     const domain = require(process.cwd() + '/settings.json').domain;
     const dirLevel = name.split('/').length;
     let dir = '../';

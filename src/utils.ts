@@ -55,7 +55,6 @@ async function installPkg(pkgTool: 'npm' | 'yarn', cwd: string) {
     console.log(chalk.red('请先安装yarn'));
   } else {
     const spinner = ora(chalk.blue('正在安装依赖...')).start();
-    console.log(cwd)
     exec(`${tool} install`, {cwd}).then(res => {
       spinner.succeed(chalk.green('依赖安装成功'));
     }).catch(err => {
