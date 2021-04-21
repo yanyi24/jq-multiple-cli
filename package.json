@@ -1,6 +1,6 @@
 {
   "name": "jq-multiple-cli",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -19,9 +19,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/yanyi24_yanyi9399/jq-multiple-cli.git"
+    "url": "https://github.com/yanyi24/jq-multiple-cli.git"
   },
-  "keywords": ["webpack5", "jQuery", "PWA", "multiple page", "cli", "自动构建"],
+  "keywords": [
+    "webpack5",
+    "jQuery",
+    "PWA",
+    "multiple page",
+    "cli",
+    "自动构建"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
